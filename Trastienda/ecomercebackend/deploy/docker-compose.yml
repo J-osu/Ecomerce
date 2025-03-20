@@ -1,0 +1,14 @@
+version: '3'
+services:
+  db:
+    container_name: bdecomerce
+    image: mysql
+    environment:
+      MYSQL_USER: ecomerce01
+      MYSQL_PASSWORD: pswecomerce
+      MYSQL_DATABASE: ecomerce_electronico
+      MYSQL_ROOT_PASSWORD: 1234
+    volumes:
+      - "./data:/var/lib/mysql"
+    ports:
+      - "3309:3306"
